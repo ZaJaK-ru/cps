@@ -1,0 +1,122 @@
+.services {
+  &__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 0;
+  }
+
+  &__head-title {
+    flex-shrink: 0;
+    flex-grow: 1;
+  }
+
+  &__btn-icon {
+    position: relative;
+    display: none;
+    flex-shrink: 0;
+    margin-left: 125px;
+    margin-right: 32px;
+
+    &::before {
+      font-family: 'TT Lakes';
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: -0.2px;
+      color: #1b1c21;
+      content: attr(data-btn-title);
+      position: absolute;
+      top: 8px;
+      right: 48px;
+      white-space: nowrap;
+    }
+
+    @media (min-width: $screen-lg) {
+      display: block;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    padding: 0 24px 24px;
+    overflow: scroll;
+    align-items: center;
+
+    @media (min-width: $screen-lg) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__btn-text {
+    background-color: $bg-color;
+    color: $text-color--light;
+    border: 2px solid $bg-color;
+    border-radius: 6px;
+    padding: 8px 16px;
+    transition: .2s;
+
+    &:focus {
+      background-color: $color-white;
+      border-color: $btn-color--mentol;
+    }
+  }
+
+  &__content {
+    display: flex;
+    max-width: 100%;
+    flex-direction: column;
+    margin-bottom: 24px;
+
+    @media (min-width: $screen-md) {
+      padding: 8px;
+      flex-direction: row;
+      gap: 48px;
+    }
+
+    @media (min-width: $screen-lg) {
+      padding: 18px;
+    }
+  }
+
+  &__content-block {
+    width: 100%;
+  }
+
+  &__content-text {
+    height: 90px;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 0 16px;
+    overflow: hidden;
+
+    & p {
+      margin-bottom: 18px;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+
+    @media (min-width: $screen-md) {
+      height: 160px;
+    }
+
+    &--open {
+      height: auto;
+    }
+  }
+
+  &__show-more {
+    margin: 16px;
+  }
+
+  &__content-image {
+    width: 100%;
+
+    @media (min-width: $screen-md) {
+      width: 95%;
+      border-radius: 6px;
+    }
+  }
+}

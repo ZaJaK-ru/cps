@@ -1,0 +1,11 @@
+.btn-text {
+  white-space: nowrap;
+  text-align: center;
+  vertical-align: middle;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}

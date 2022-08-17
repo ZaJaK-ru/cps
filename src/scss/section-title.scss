@@ -1,0 +1,10 @@
+.section-title {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: normal;
+  background: linear-gradient(to right, $bg-color 0, $color-white 100%);
+  border-top: 1px solid $line-color;
+  padding: 16px;
+  color: $text-color--light;
+  text-transform: uppercase;
+}

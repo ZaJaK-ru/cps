@@ -1,0 +1,107 @@
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($color: $color-white, $alpha: 0.9);
+  z-index: 1000;
+
+  &--open {
+    display: block;
+  }
+
+  &__content {
+    overflow: scroll;
+    min-width: 320px;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    background-color: $color-white;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    animation-name: modal;
+    animation-duration: 0.8s;
+
+    @media (min-width: $screen-md) {
+      overflow:visible;
+      width: 440px;
+      border: 1px solid $line-color;
+      box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
+    }
+  }
+
+  &__close {
+    margin: 24px 16px 40px;
+
+    @media (min-width: $screen-md) {
+      position: absolute;
+      margin: 0;
+      top: 32px;
+      left: -72px;
+    }
+  }  
+
+  &__title {
+    margin-bottom: 24px;
+
+    @media (min-width: $screen-md) {
+      margin-top: 32px;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    gap: 16px;
+    padding-bottom: 32px;
+  }
+
+  &__input {
+    padding: 12px 16px;
+    margin: 0 32px;
+    border-radius: 8px;
+    border: 1px solid $divider-color;
+    font-size: 16px;
+    line-height: 24px;
+
+    &::placeholder {
+      color: $placeholder-color;
+    }
+
+    &:focus {
+      border-color: $line-color;
+    }
+
+    &:hover {
+      border-color: $line-color;
+    }
+  }
+
+  &__info {
+    margin: 0 32px;
+    font-size: 14px;
+
+    & a {
+      color: $btn-color--rose;
+
+      &:hover {
+        opacity: .7;
+      }
+    }
+  }
+
+  &__submit {
+    margin: 0 32px;
+    align-self: flex-end;
+  }
+}
+
+@keyframes modal {
+  from { right: -100%; opacity: 0 }
+  to { right: 0; opacity: 1 }
+}

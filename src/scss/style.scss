@@ -1,17 +1,22 @@
-$bgColor: #24292e;
-$text: #fff;
-
-@font-face {
-  font-family: 'Comic';
-  src: url('../fonts/comic.ttf') format('truetype');
-  font-weight: normal;
-  font-style: italic;
-}
-
-body {
-  padding: 1rem;
-  margin: 0;
-  font-family: Comic, sans-serif;
-  background-color: $bgColor;
-  color: $text;
-}
+@import '~normalize.css';
+@import '~modern-css-reset';
+@import 'fonts';
+@import 'variables';
+@import '~swiper/swiper-bundle.min.css';
+@import 'base';
+@import 'btn-icon';
+@import 'btn-text';
+@import 'btn-around';
+@import 'link';
+@import 'section-title';
+@import 'head-title';
+@import 'show-more';
+@import 'header';
+@import 'menu';
+@import 'services';
+@import 'swiper';
+@import 'brands';
+@import 'tech-types';
+@import 'prices';
+@import 'footer';
+@import 'modal'; 
