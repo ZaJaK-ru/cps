@@ -478,7 +478,8 @@ body {
 
 .link {
   text-decoration: none;
-  color: #1B1C21; }
+  color: #1B1C21;
+  cursor: pointer; }
   .link:hover {
     opacity: 0.7; }
 
@@ -657,11 +658,13 @@ body {
       .menu__phone {
         margin-bottom: 40px; } }
   .menu__lang-switcher {
-    margin-bottom: 32px; }
-  .menu__lang-switcher-btn {
-    background-color: inherit;
+    padding: 0;
+    margin: 0 0 32px 0;
+    list-style: none;
+    display: flex; }
+  .menu__lang-switcher-link {
     padding: 2px; }
-    .menu__lang-switcher-btn--active {
+    .menu__lang-switcher-link--active {
       color: #7E7E82; }
 
 @-webkit-keyframes menu {
