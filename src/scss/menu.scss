@@ -125,13 +125,14 @@
   }
 
   &__lang-switcher {
-    margin-bottom: 32px;
+    padding: 0;
+    margin: 0 0 32px 0;
+    list-style: none;
+    display: flex;
   }
 
-  &__lang-switcher-btn {
-    background-color: inherit;
+  &__lang-switcher-link {
     padding: 2px;
-    // color: #1B1C21;
 
     &--active {
       color: #7E7E82;

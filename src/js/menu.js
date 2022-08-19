@@ -36,3 +36,13 @@ overlay.addEventListener('click', function() {
   menu.classList.remove('menu--open');
   this.classList.remove('overlay--open');
 });
+
+const langSwitchLinks = document.querySelectorAll('.menu__lang-switcher-link');
+
+for (let i = 0; i < langSwitchLinks.length; i++) {
+  langSwitchLinks[i].addEventListener('click', function(e) {
+    let current = document.getElementsByClassName("menu__lang-switcher-link--active");
+    current[0].className = current[0].className.replace(" menu__lang-switcher-link--active", "");
+    this.className += " menu__lang-switcher-link--active";
+  });
+}
